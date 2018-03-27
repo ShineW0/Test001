@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+*{padding:0 0; margin:0 0;}
+/*页面内容*/
+.lr_mcontainer{width:100%; float:left; margin-top: 10px;}
+.lr_mcontainer .lr_container{width:1180px; margin:0 auto;}
+.lr_mcontainer .lr_container .lr_nav{width:1180px; border-bottom:1px solid #22BB61; }
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul{width:1180px; background:white;}
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul li a{font-size:30px; font-weight:600;}
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul li a:link{ color:#22BB61;}
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul li a:visited{color:#22BB61;}
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul li a:hover{color:white; background:#22BB61;}
+.lr_mcontainer .lr_container .lr_nav .my_nav_ul li a:active{color:white; background:#22BB61;}
+/*登录界面的样式*/
+.lr_mcontainer .lr_container #myTabContent #m_login{margin-top:40px; width:1180px; border:1px solid #22BB61; background:url(../images/login_regist/background.jpg); height:480px;}
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con{margin-left:50px; float:left; width:450px; border:1px solid #22BB61; background:white; margin-top:120px; padding-top:15px; padding-bottom:30px; }
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con .my_field{width:400px; height:60px; margin:10px auto;}
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con .my_field label{width:120px; font-size:23px; padding-top:15px; margin-left:8px; font-family: "宋体"; font-weight:900;}
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con .my_field input{font-size:20px; font-family:"宋体";width:250px; height:40px; border:1px solid #666666; border-radius:5px;}
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con .my_field select{font-size:20px; font-family:"宋体"; width:250px; height:40px; border:1px solid #666666; border-radius:5px;}
+.lr_mcontainer .lr_container #myTabContent #m_login .ml_con .my_field .bt_css{margin-top:20px; margin-left: 100px; width: 160px; height:45px; background:#22BB61; border-radius:5px; border:1px solid #22BB61; font-size:23px; font-weight: 900; color:white; font-family:"宋体";}
+/*注册界面的样式*/
+.lr_mcontainer .lr_container #myTabContent #m_regist{width:1180px; border:1px solid #22BB61; background: url(../images/login_regist/background.jpg); height:480px; margin-top:50px;}
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con{float:right; width:920px; border:1px solid #22BB61; margin-top:60px; margin-right: 20px; padding-top:15px;background:white; padding-bottom:30px; }
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con .my_field{padding-left:30px; width:420px; height:60px; margin:10px auto; float:left;}
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con .my_field label{width:120px; font-size:23px; padding-top:15px; margin-left:8px; font-family: "宋体"; font-weight:900;}
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con .my_field input{font-size:20px; font-family:"宋体";width:250px; height:40px; border:1px solid #666666; border-radius:5px;}
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con .my_field select{font-size:20px; font-family:"宋体"; width:250px; height:40px; border:1px solid #666666; border-radius:5px;}
+.lr_mcontainer .lr_container #myTabContent #m_regist .mr_con .my_field .bt_css{margin-top:20px; margin-left: 380px; width: 160px; height:45px; background:#22BB61; border-radius:5px; border:1px solid #22BB61; font-size:23px; font-weight: 900; color:white; font-family:"宋体";}

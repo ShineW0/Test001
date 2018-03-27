@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyn.domain">
+  <select id="queryFunctionByDid" parameterType="int" resultMap="oneToMoreFun">
+  	select * from dict d, function f where d.id = f.did and d.id=#{id}
+  </select>
+  <resultMap type="com.hyn.domain.Dict" id="oneToMoreFun">
+  	<id property="id" column="id"/>
+  	<result property="data_name" column="data_name"/>
+  	<result property="data_code" column="data_code"/>
+  	<result property="data_type" column="data_type"/>
+  	<result property="data_pared" column="data_pared"/>
+  	<collection property="funList" ofType="com.hyn.domain.Function">
+  		<id property="id" column="id"/>
+  		<result property="fun_name" column="fun_name"/>
+  		<result property="state" column="state"/>
+  	</collection>
+  </resultMap>
+</mapper>

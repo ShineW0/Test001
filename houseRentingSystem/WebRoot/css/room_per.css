@@ -1,0 +1,37 @@
+*{margin:0 0; padding:0 0;}
+.room_myContainer{width:100%; position:relative; float:left;}
+.room_myContainer .room_mc{width:1180px;margin:0 auto;}
+/*房间标题*/
+.room_myContainer .room_mc .room_mc_title{width:1180%; height:35px; margin-left: 10px;}
+/*房间介绍的图片轮播*/
+.room_myContainer .room_mc .room_carousel{width:730px; height:590px;float:left; }
+/*房间信息*/
+.room_myContainer .room_mc .room_right{border: 1px solid #e9e8e9; margin-top:20px; width:400px; height:590px; float:right; margin-left:40px;}
+.room_myContainer .room_mc .room_right .room_rent{width: 395px; height:60px; float:left; background:#EEEEEE; padding-left: 5px;}
+.room_myContainer .room_mc .room_right .room_rent h2{float:left; margin-top:20px;margin-left: 5px; color:#ff6600;}
+.room_myContainer .room_mc .room_right .room_rent h1{float:left; margin-top:14px; margin-left: 5px; color:#ff6600;}
+/*房间信息用列表输出*/
+.room_myContainer .room_mc .room_right ul{list-style:none; width: 380px; margin-left:20px; float:left; margin-top:40px;}
+.room_myContainer .room_mc .room_right ul li{width:380px; padding-bottom:10px; padding-top:15px;}
+.room_myContainer .room_mc .room_right ul li span{color: #999999; font-size:16px; width:80px; display:block;float:left;}
+.room_myContainer .room_mc .room_right ul li p{font-size:16px; width: 300px; float:left; font-weight: 700; color:#3D3E3F;}
+.room_myContainer .room_mc .room_right ul li .per_phone{color:#FF6600;}
+.room_myContainer .room_mc .room_right .room_tip{margin-top:20px; width: 385px; height:110px;border:3px solid #FF6600; float:left; margin-left: 5px;}
+.room_myContainer .room_mc .room_right .room_tip .rtip_top{width: 385px; float:left; color:#FF6600;}
+.room_myContainer .room_mc .room_right .room_tip .rtip_bottom{width:385px; float:left; margin-top:10px; font-family: "微软雅黑"; color: #FF6600;}
+/*房间详细信息模块*/
+.room_myContainer .room_intro{width:100%; float:left; margin-top:70px;}
+.room_myContainer .room_intro .room_intro_all{width: 1180px; margin:0 auto; }
+/*房间详细信息导航*/
+.room_myContainer .room_intro .room_intro_all .my_nav_ul{border-bottom:1px solid #FF6600; width:1180px; background:white;}
+.room_myContainer .room_intro .room_intro_all .my_nav_ul li a{font-size:30px; font-weight:600;}
+.room_myContainer .room_intro .room_intro_all .my_nav_ul li a:link{color: #333;}
+.room_myContainer .room_intro .room_intro_all .my_nav_ul li a:visited{color:#333333;}
+.room_myContainer .room_intro .room_intro_all .my_nav_ul li a:hover{color:white; background:#ff6600;}
+.room_myContainer .room_intro .room_intro_all .my_nav_ul li a:active{color:white; background:#FF6600;}
+/*房间详细信息描述*/
+.room_myContainer .room_intro .room_intro_all .my_room_intro_show{width:1180px; float:left;}
+.room_myContainer .room_intro .room_intro_all .my_room_intro_show #room_desc{padding-top:60px;}
+.room_myContainer .room_intro .room_intro_all .my_room_intro_show #room_desc p{width:1030px;margin-left:150px; margin-top:25px; font-size:20px;}
+.room_myContainer .room_intro .room_intro_all .my_room_intro_show #room_facil{padding-top: 60px;}
+.room_myContainer .room_intro .room_intro_all .my_room_intro_show #room_village{padding-top:60px;}

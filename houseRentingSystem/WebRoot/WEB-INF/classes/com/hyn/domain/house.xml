@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyn.domain2">
+  <select id="queryHouseNav" resultMap="HouseList">
+  	select * from house
+  	<where>
+	  	<if test="address!=null and address!=''">
+	  		and address=#{address}
+	  	</if>
+	  	<if test="house_room!=null and house_room!=''">
+	  		and house_room=#{house_room}
+	  	</if>
+  	</where>
+  </select>
+  <resultMap type="com.hyn.domain.House" id="HouseList">
+  	<id property="id" column="id"/>
+  	<result property="u_id" column="u_id"/>
+  	<result property="rental_mode" column="rental_mode"/>
+  	<result property="village_name" column="village_name"/>
+  	<result property="address" column="address"/>
+  	<result property="house_room" column="house_room"/>
+  	<result property="living_room" column="living_room"/>
+  	<result property="house_toilet" column="house_toilet"/>
+  	<result property="house_direction" column="house_direction"/>
+  	<result property="decoration" column="decoration"/>
+  	<result property="house_type" column="house_type"/>
+  	<result property="rental" column="rental"/>
+  	<result property="house_title" column="house_title"/>
+  	<result property="house_intro" column="house_intro"/>
+  	<result property="image1" column="image2"/>
+  	<result property="image2" column="image2"/>
+  	<result property="image3" column="image3"/>
+  	<result property="house_area" column="house_area"/>
+  </resultMap>
+</mapper>

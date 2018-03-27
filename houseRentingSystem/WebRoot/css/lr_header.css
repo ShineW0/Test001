@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+*{padding:0 0; margin:0 0;}
+/*头部信息的样式*/
+.header{height: 60px; width: 100%; border-bottom: 1px solid #D7D9E2;}
+.header .header_all{height:60px; width:1180px; margin:0 auto;}
+.header .header_all .header_l{width: 55%; height: 100%; float: left;}
+.header .header_all .header_l{ float:left;}
+.header .header_all .header_l .p_nav p{float: right; margin-right:30px;font-family: "宋体"; font-size: 20px; color: #333; padding-top:19px;}
+.header .header_all .header_l .p_log p{margin-top:9px;font-size:35px; font-family:"arial, helvetica, sans-serif"; color:#22BB61; float: left;}
+.header .header_all .header_l a{text-decoration:none; float:right; margin-right:50px;font-family: "宋体"; font-size: 20px; color: #333; padding-top:19px;}
+.header .header_all .header_l a:link{color: #5d5c5b;}
+.header .header_all .header_l a:visited{color: #5d5c5b;}
+.header .header_all .header_l a:hover{color: #d7d9e2;}
+.header .header_all .header_l a:active{color: #d7d9e2;}
+
+.header .header_all .header_r{width: 45%; height: 100%; float: left;}
+.header .header_all .header_r .lr_did{width: 1px; height: 100%; background: #D7D9E2; float:left;}
+.header .header_all .header_r .login_regist{font-family: "宋体"; font-size: 20px;  margin-left: 20px; margin-top:10px; margin-right:20px; float:left;}
+.header .header_all .header_r .login_regist a{text-decoration:none;}
+.header .header_all .header_r .login_regist a:link{color: #5d5c5b;}
+.header .header_all .header_r .login_regist a:visited{color: #5d5c5b;}
+.header .header_all .header_r .login_regist a:hover{color: #d7d9e2;}
+.header .header_all .header_r .login_regist a:hover{color: #d7d9e2;}
+.header .header_all .header_r .login_regist a:active{color: #d7d9e2;}
+.header .header_all .header_r .seller_enlist {font-family: "宋体"; font-size: 20px; color: #333; padding-top:19px; float: right;}
+.header .header_all .header_r .seller_enlist a{text-decoration:none;}
+.header .header_all .header_r .seller_enlist a:link{color: #5d5c5b;}
+.header .header_all .header_r .seller_enlist a:visited{color: #5d5c5b;}
+.header .header_all .header_r .seller_enlist a:hover{color: #d7d9e2;}
+.header .header_all .header_r .seller_enlist a:active{color: #d7d9e2;}

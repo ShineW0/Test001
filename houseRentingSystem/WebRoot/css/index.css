@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+html,body{margin:0 0; padding: 0 0;}
+/*轮播样式*/
+.carousel_intro{width: 100%; height: 440px; overflow: hidden;}
+/*首页广告轮播上的搜索框*/
+/*
+.carousel_search{width:1000px; margin-top: -140px; position: relative; margin-left: 210px;}
+.carousel_search dl dd{float: left;}
+.carousel_search .car_one .car_sea_pla{border-left: 1px solid #c1bcbc;box-sizing: border-box;border-bottom-left-radius: 2px;border-top-left-radius: 2px; height: 46px;}
+.carousel_search .car_one .car_sea_pla .text{width: 483px; height: 46px;}
+.carousel_search .car_one .car_sea_date .text{width: 272px; height: 46px;}
+.carousel_search .car_one .car_sea_date{position: relative;  box-sizing: border-box;}
+.carousel_search .car_one .car_bt{ width: 110px; background-color: #22bb62; font-size: 20px; text-align: center; border-bottom-right-radius: 2px; border-top-right-radius: 2px; color: #fff; height: 46px;}
+.carousel_search .car_one .car_bt input{color: #fff; height: 46px; line-height: 26px; text-indent: 0; background-color: transparent; width: 110px;}
+*/
+/*页面内容的样式*/
+.myContainer { width: 1350px; height:1500px; float:left;}
+.myContainer .myCon_ad{width: 100%; height: 100px; background-color: #edefed; float: left;}
+.myContainer .myCon_ad .myCon_ad_css{margin-left:70px; width: 1200; height: 100px; float:left;}
+.myContainer .myCon_ad .myCon_ad_css .myCon_ad_per{width:300px; height: 100px; float:left;}
+.myContainer .myCon_ad .myCon_ad_css .myCon_ad_per .myCon_ad_per_top{font-family:"arial, helvetica, sans-serif"; font-size:20px; text-align:center; color: #333; margin-top:20px;}
+.myContainer .myCon_ad .myCon_ad_css .myCon_ad_per .myCon_ad_per_bottom{font-family:"arial, helvetica, sans-serif";margin-top: 5px; font-weight:500; font:10px; text-align:center; color:#777776;}
+/*热门短租城市*/
+.myContainer .short_rent_hotCity{ width: 1250px; margin:0 auto;}
+/*热门短租城市的标题*/
+.myContainer .short_rent_hotCity .srhc_title{float:left; height: 150px; width:100%; text-align: center;}
+.myContainer .short_rent_hotCity .srhc_title .tit_top{font-size:40px; font-weight: 900; margin-top:40px;}
+.myContainer .short_rent_hotCity .srhc_title .tit_bottom{font-size:22px; font-family:宋体; color: #777776; margin-top:10px ;}
+/*热门短租城市连接*/
+.myContainer .short_rent_hotCity .srhc_intro{width:1350px; height:360px; float: left;}
+.myContainer .short_rent_hotCity .srhc_intro ul{margin: 0 auto; width: 1300px;height:180px; list-style: none;}
+.myContainer .short_rent_hotCity .srhc_intro ul li{height: 180px;line-height: 180px;position: relative; width:300px; float: left;}
+.myContainer .short_rent_hotCity .srhc_intro ul li img{width: 100%;height: 100%;transition: transform 0.3s ease 0s;}
+.myContainer .short_rent_hotCity .srhc_intro ul li a{ position: absolute;top: 0;left: 0;width: 100%;height: 100%; color: #fff;font-size: 32px; text-align: center; text-decoration:none; }  
+
+/*热门房源*/
+/*标题*/
+.myContainer .long_rent_hotRoom{width:100%; margin:0 auto;}
+.myContainer .long_rent_hotRoom .lrh_c{width:1250px; margin:0 auto;}
+.myContainer .long_rent_hotRoom .lrhr_title{float:left; height: 150px; width:100%; text-align: center;}
+.myContainer .long_rent_hotRoom .lrhr_title .tit_top{font-size:40px; font-weight: 900; margin-top:40px;}
+.myContainer .long_rent_hotRoom .lrhr_title .tit_bottom{font-size:22px; font-family:宋体; color: #777776; margin-top:10px ;}
+/*热门房源*/
+.myContainer .long_rent_hotRoom .lrhr_intro{width:1350px; height:760px; float: left;}
+.myContainer .long_rent_hotRoom .lrhr_intro ul{margin:0 auto; width:1300px; height:380px; list-style: none;}
+.myContainer .long_rent_hotRoom .lrhr_intro ul li{margin-right:30px;height:380px;width:380px; line-height:380px; float: left;}
+.myContainer .long_rent_hotRoom .lrhr_intro ul li img{height:300px; width:380px; float: left;}
+.myContainer .long_rent_hotRoom .lrhr_intro ul li a{margin-top:5px; text-decoration: none; font-size: 25px; color: #322c27; line-height: 30px;float: left;width: 380px;}
+.myContainer .long_rent_hotRoom .lrhr_intro ul li .a_css{text-decoration: none; font-size: 15px; color:#777776; float: left; width:25%;}
+/*主页的底部*/
+.footer{padding-top:50px; width: 100%; background: #333; height:130px; float: left; font-family:宋体; font-size: 25px; color: white; text-align: center; margin-top: 50px;}
