@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+    <!--显示车辆信息  -->
     <title>数据字典页面</title>
     
 	<meta http-equiv="pragma" content="no-cache">
@@ -88,10 +88,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         		管理界面
                     </a>
                 </li>
-                <li class="current"><a href="#"><img src="img/icons/menu/layout.png" alt="" />租赁房屋管理</a>
+                <li class="current"><a href="#"><img src="img/icons/menu/layout.png" alt="" />车源管理</a>
                     <ul>
-	                    <li><a href="admin_manage_room_insert.jsp">增加房源信息</a></li>
-	                    <li class="current"><a href="queryHouse.do">查删改房源信息</a></li>
+	                    <li><a href="admin_manage_room_insert.jsp">增加车辆信息</a></li>
+	                    <li class="current"><a href="queryHouse.do">查删改车辆信息</a></li>
 	                </ul>
                 </li>
                 <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />用户账户管理</a>
@@ -100,16 +100,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <li><a href="selectUser.do">查删改用户管理</a></li>
                     </ul>
                 </li>
-                <li class="current"><a href="#"><img src="img/icons/menu/brush.png" alt="" />数据字典管理</a>
-                    <ul>
-                       	<li><a href="admin_dict_insert.jsp">添加数据字典管理</a></li>
-	                    <li class="current"><a href="dict.do">查删改数据字典管理</a></li>
-                    </ul>
-                </li>
-                <li><a href="admin_user_power.jsp"><img src="img/icons/menu/brush.png" alt="" />权限管理</a> </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />财务报表管理</a>
-                </li>
-                <li><a href="admin_data_init_manage.jsp"><img src="img/icons/menu/brush.png" alt="" />数据初始化管理</a></li>
+                
             </ul>
         </div>
         
@@ -125,12 +116,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table>
 		            <thead>
 		                <tr>
-		                    <th>房屋标题</th>
-		                    <th>房屋类型</th>
-		                    <th>装修情况</th>
-		                    <th>房屋朝向</th>
-		                    <th>房屋地址</th>
-		                    <th>小区名称</th>
+		                    <th>车辆标题</th>
+		                   <!--  <th>车辆类型</th> -->
+		                    <th>车辆配置</th>
+		                    <th>车辆颜色</th>
+		                    <th>地址</th>
+		                    <th>城市</th>
 		                    <th>操作：修改</th>
 		                    <th>操作：删除</th>
 		                </tr>
@@ -139,7 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		            	<c:forEach items="${houseList }" var="house">
 		                <tr>
 		                    <td>${house.house_title}</td>
-		                    <td>${house.house_type}</td>
+		                   <%--  <td>${house.house_type}</td> --%>
 		                    <td>${house.decoration}</td>
 		                    <td>${house.house_direction}</td>
 		                    <td>${house.address}</td>

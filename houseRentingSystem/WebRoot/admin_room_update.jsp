@@ -14,8 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
-    <title>添加房源信息页面</title>
+    <!--  修改1-->
+    <title>添加车辆信息页面</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -90,10 +90,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         		管理界面
                     </a>
                 </li>
-                <li class="current"><a href="#"><img src="img/icons/menu/layout.png" alt="" />租赁房屋管理</a>
+                <li class="current"><a href="#"><img src="img/icons/menu/layout.png" alt="" />车源管理</a>
                     <ul>
-	                    <li><a href="admin_manage.jsp">增加房源信息</a></li>
-	                    <li class="current"><a href="queryHouse.do">查询房源信息</a></li>
+	                    <li><a href="admin_manage_room_insert.jsp">增加车辆信息</a></li>
+	                    <li class="current"><a href="queryHouse.do">查询车辆信息</a></li>
 	                </ul>
                 </li>
                 <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />用户账户管理</a>
@@ -102,21 +102,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <li><a href="selectUser.do">查删改用户管理</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />数据字典管理</a>
-                    <ul>
-                       	<li><a href="admin_dict_insert.jsp">添加数据字典管理</a></li>
-	                    <li><a href="dict.do">查删改数据字典管理</a></li>
-                    </ul>
-                </li>
-                <li><a href="admin_user_power.jsp"><img src="img/icons/menu/brush.png" alt="" />权限管理</a> </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />财务报表管理</a>
-                </li>
-                <li><a href="admin_data_init_manage.jsp"><img src="img/icons/menu/brush.png" alt="" />数据初始化管理</a></li>
+                
             </ul>
         </div>
 <!-- 页面内容开始 -->
         <div id="content" class="white">
-            <h1><img src="img/icons/posts.png" alt="" /> 添加房源信息 </h1>
+            <h1><img src="img/icons/posts.png" alt="" /> 添加车辆信息 </h1>
 
 <div class="bloc">
     <div class="title">添加信息</div>
@@ -172,79 +163,74 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<input type="text" name="image2" value="upload/${file02}" style="display:none;" />
     	<input type="text" name="image3" value="upload/${file03}" style="display:none;"/>
     	<div class="input_css">
-            <label class="label label_css">出租方式</label>
+            <label class="label label_css">购买方式</label>
 			<label>
-				<input type="radio" name="rental_mode" id="optionsRadios1" value="整租" checked> 整租
+				<input type="radio" name="rental_mode" id="optionsRadios1" value="整租" checked> 全款
 			</label>
 			<label>
-				<input type="radio" name="rental_mode" id="optionsRadios2" value="合租">合租
+				<input type="radio" name="rental_mode" id="optionsRadios2" value="合租">贷款
 			</label>
         </div>
-    	<!--出租方式结束-->
-    	<!--小区名称开始-->
+    	<!--付款方式结束-->
+    	<!--城市名称开始-->
     	<div class="input">
-    		<label class="label label_css">小区名称</label>
+    		<label class="label label_css">城市名称</label>
     		<input type="text" name="village_name" id="input1" value="${house.village_name }" />
     	</div>
-    	<!--小区名称结束-->
+    	<!--城市名称结束-->
     	<!--详细地址开始-->
     	<div class="input_css input">
             <label for="BigCate">详细地址</label>
             <span>
             	<select name="address">
-            		<option>${house.address }</option>
-	                <option value="尖草坪区">尖草坪区</option> 
-					<option value="迎泽区">迎泽区</option>
-					<option value="万柏林区">万柏林区</option>
+            		<%-- <option>${house.address }</option> --%>
+	                <option value="北京">北京</option> 
+					<option value="上海">上海</option>
+					<option value="深圳">深圳</option>
             	</select>
             </span>
         </div>
     	<!--详细地址结束-->
-    	<!--房屋户型开始-->
+    	<!--车辆类型开始-->
         <div class="input input_css">
-            <label for="input1">房屋户型</label>
-	    	<input class="unit_room_in" type="text" id="input1" name="house_room" value="${house.house_room }"/><p>室</p>
-	    	<input class="unit_room_in" type="text" id="input1" name="living_room" value="${house.living_room }" /><p>厅</p>
-	    	<input class="unit_room_in" type="text" id="input1" name="house_toilet" value="${house.house_toilet }" /><p>卫</p>
-        </div>
-        <!--房屋户型结束-->
-        <!--房屋面积开始-->
+            <label for="input1">车辆类型</label>
+	    	<input class="unit_room_in" type="text" id="input1" name="house_room" value="${house.house_room }"/><p>座位</p>
+	    	<input class="unit_room_in" type="text" id="input1" name="living_room" value="${house.living_room }" /><p>人数</p>
+	    	<input class="unit_room_in" type="text" id="input1" name="house_toilet" value="${house.house_toilet }" /><p>驾驶位</p>
+        </div> 
+        <!--车辆类型结束-->
+        <!--车辆体积开始-->
         <div class="input input_css">
-            <label for="input1">房屋面积</label>
-	    	<input class="unit_room_in" type="text" id="input1" name="house_area" value="${house.house_area }"/><p>平米</p>
+            <label for="input1">称车辆大小</label>
+	    	<input class="unit_room_in" type="text" id="input1" name="house_area" value="${house.house_area }"/><p>立方米</p>
         </div>
-        <!--房屋面积结束-->
-        <!--房屋情况开始-->
+        <!--车辆体积结束-->
+        <!--车辆状况开始-->
         <div class="input_css input">
-            <label for="BigCate">房屋情况</label>
+            <label for="BigCate">车辆情况</label>
             <span>
             	<select name="house_direction">
-	                <option>${house.house_direction }</option>
-	                <option>朝向</option>
-					<option>东</option>
-					<option>南</option>
-					<option>西</option>
-					<option>北</option>
-					<option>东西</option>
-					<option>南北</option>
-					<option>东南</option>
-					<option>西南</option>
-					<option>东北</option>
-					<option>西北</option>
+	                <%-- <option>${house.house_direction }</option> --%>
+	                <option>颜色</option>
+					<option>黑</option>
+					<option>白</option>
+					<option>银</option>
+					<option>红</option>
+					
             	</select>
             </span>
             <span>
             	<select name="decoration" >
-            		<option>${house.decoration }</option>
-            		<option>装修情况</option>
-					<option>豪华装修</option>
-					<option>精装修</option>
-					<option>中等装修</option>
-					<option>普通装修</option>
-					<option>毛坯</option>
+            		<%-- <option>${house.decoration }</option> --%>
+            		<option>车辆配置</option>
+					<option>豪华版</option>
+					<option>高配版</option>
+					<option>旗舰版</option>
+					<option>标准版</option>
+					<option>低配版</option>
             	</select>
             </span>
-            <span>
+            <%-- <span>
             	<select name="house_type">
             		<option>${house.house_type }</option>
             		<option>普通住宅</option>
@@ -254,33 +240,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<option>酒店公寓</option>
 					<option>商住两用</option>
             	</select>
-            </span>
+            </span> --%>
         </div>
-        <!--房屋情况结束-->
+        <!--车辆情况结束-->
 		
-        <!--租金要求开始-->
+        <%-- <!--租金要求开始-->
         <div class="input input_css">
             <label for="input1">租金要求</label>
 	    	<input class="unit_room_in" type="text" id="input1" name="rental" value="${house.rental }" /><p>元/月</p>
-        </div>
+        </div> --%>
         <!--租金要求结束-->
-        <!--房源标题开始-->
+        <!--车源标题开始-->
         <div class="input">
-    		<label class="label label_css">房源标题</label>
+    		<label class="label label_css">车源标题</label>
     		<input type="text" id="input1" name="house_title" value="${house.house_title }"/>
     	</div>
         <!--房源标题结束-->
         <!--房源描述开始-->
         <div class="input">
-            <label for="textarea1">房源描述</label>
+            <label for="textarea1">车辆描述</label>
             <textarea name="house_intro" id="textarea1" rows="7" cols="1"
-            	placeholder="  详细的描述可以提升房屋的出租机会                    
-									1、房屋特征：
-									2、周边配套：
-									3、房东心态：">${house.house_intro }</textarea>
+            	placeholder="  详细的描述可以提升车辆卖出机会                    
+									">${house.house_intro }</textarea>
         </div>
         
-        <!--房源描述结束-->
+        <!--车辆描述结束-->
         
         <!--提交按钮开始-->
         <div class="submit input_css">

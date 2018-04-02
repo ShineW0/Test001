@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="p_nav">
 					<p>客服电话：000-000-000</p>
 				</div>
-				<a href="roomIndex.do">车库</a>
+				<a href="admin_room_update_query_delete.jsp">车库</a>
 				<a href="index.jsp">首页</a>
 				<div class="p_log">
 					<p>二手车直卖网</p>
@@ -178,53 +178,53 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="long_rent_hotRoom">
 		<div class="lrh_c">
 		<div class="lrhr_title">
-			<div class="tit_top">汽车分类</div>
+			<div class="tit_top">经典导航</div>
 			<div class="tit_bottom">为您甄最合适的车辆</div>
 		</div>
 		
 		<div class="lrhr_intro">
 			<ul>
 				<li>
-					<a><img src="images/hot_room/01.jpg"/></a>
-					<a class="a_css"><p class="p_css">微面</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格:2-25万</p></a>
+					<a href="car_weimian.jsp"><img src="images/hot_room/01.jpg"/></a>
+					<a href="car_weimian.jsp" class="a_css"><p class="p_css">微面</p></a>
+					<a href="car_weimian.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_weimian.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_weimian.jsp" class="a_css"><p class="p_css">价格:2-25万</p></a>
 				</li>
 				<li>
-					<a><img src="images/hot_room/02.jpg"/></a>
-					<a class="a_css"><p class="p_css">皮卡</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格:4-77万</p></a>
+					<a href="car_pika.jsp"><img src="images/hot_room/02.jpg"/></a>
+					<a href="car_pika.jsp" class="a_css"><p class="p_css">皮卡</p></a>
+					<a href="car_pika.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_pika.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_pika.jsp" class="a_css"><p class="p_css">价格:4-77万</p></a>
 				</li>
 				<li>
-					<a><img src="images/hot_room/03.jpg"/></a>
-					<a class="a_css"><p class="p_css">SUV</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格:3-100万</p></a>
+					<a href="car_suv.jsp"><img src="images/hot_room/03.jpg"/></a>
+					<a href="car_suv.jsp" class="a_css"><p class="p_css">SUV</p></a>
+					<a href="car_suv.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_suv.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_suv.jsp" class="a_css"><p class="p_css">价格:3-100万</p></a>
 				</li>
 				<li>
-					<a><img src="images/hot_room/04.jpg"/></a>
-					<a class="a_css"><p class="p_css">跑车</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格:22-100万</p></a>
+					<a href="car_paoche.jsp"><img src="images/hot_room/04.jpg"/></a>
+					<a href="car_paoche.jsp" class="a_css"><p class="p_css">跑车</p></a>
+					<a href="car_paoche.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_paoche.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_paoche.jsp" class="a_css"><p class="p_css">价格:22-100万</p></a>
 				</li>
 				<li>
-					<a><img src="images/hot_room/05.jpg"/></a>
-					<a class="a_css"><p class="p_css">大型车</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格:41-100万</p></a>
+					<a href="car_bigcar.jsp"><img src="images/hot_room/05.jpg"/></a>
+					<a href="car_bigcar.jsp" class="a_css"><p class="p_css">大型车</p></a>
+					<a href="car_bigcar.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_bigcar.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_bigcar.jsp" class="a_css"><p class="p_css">价格:41-100万</p></a>
 				</li>
 				<li>
-					<a><img src="images/hot_room/06.jpg"/></a>
-					<a class="a_css"><p class="p_css">小型车</p></a>
-					<a class="a_css"><p class="p_css">4.4分</p></a>
-					<a class="a_css"><p class="p_css">23条评论</p></a>
-					<a class="a_css"><p class="p_css">价格：3-53万</p></a>
+					<a href="car_smallcar.jsp"><img src="images/hot_room/06.jpg"/></a>
+					<a href="car_smallcar.jsp" class="a_css"><p class="p_css">小型车</p></a>
+					<a href="car_smallcar.jsp" class="a_css"><p class="p_css">4.4分</p></a>
+					<a href="car_smallcar.jsp" class="a_css"><p class="p_css">23条评论</p></a>
+					<a href="car_smallcar.jsp" class="a_css"><p class="p_css">价格：3-53万</p></a>
 				</li>
 			</ul>
 		</div>

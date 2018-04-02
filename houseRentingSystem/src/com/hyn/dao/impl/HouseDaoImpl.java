@@ -22,7 +22,9 @@ public class HouseDaoImpl implements HouseDao{
 	HouseMapper houseMapper = session.getMapper(HouseMapper.class);
 	//插入数据
 	public void insertHouse(House house) {
+		System.out.println("yes housemapper");
 		houseMapper.insertHouse(house);
+		
 	}
 	//查询数据：通过id查询
 	public House getHouseById(int id) {

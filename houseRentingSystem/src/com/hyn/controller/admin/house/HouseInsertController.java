@@ -95,7 +95,11 @@ public class HouseInsertController {
 	//插入房间信息
 	@RequestMapping(value="/insertHouse.do")
 	public String insertHouse(@ModelAttribute House house){
+		System.out.println("yes controller");
+		System.out.println(house.getVillage_name());
 		houseService.insertHouse(house);
+		
+		
 		return "admin_manage_room_insert.jsp";
 	}
 	

@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>添加房源信息页面</title>
+    <title>添加车辆信息页面</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -109,16 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <li class="current"><a href="selectUser.do">查删改用户管理</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />数据字典管理</a>
-                    <ul>
-                       	<li><a href="admin_dict_insert.jsp">添加数据字典管理</a></li>
-	                    <li><a href="dict.do">查删改数据字典管理</a></li>
-                    </ul>
-                </li>
-                <li><a href="admin_user_power.jsp"><img src="img/icons/menu/brush.png" alt="" />权限管理</a> </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />财务报表管理</a>
-                </li>
-                <li><a href="admin_data_init_manage.jsp"><img src="img/icons/menu/brush.png" alt="" />数据初始化管理</a></li>
+                
             </ul>
         </div>
         <div id="content" class="white">

@@ -97,10 +97,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         		管理界面
                     </a>
                 </li>
-                <li><a href="#"><img src="img/icons/menu/layout.png" alt="" />租赁房屋管理</a>
+                <li><a href="#"><img src="img/icons/menu/layout.png" alt="" />车源管理</a>
                     <ul>
-	                    <li><a href="admin_manage_room_insert.jsp">增加房源信息</a></li>
-	                	<li><a href="queryHouse.do">查询房源信息</a></li>
+	                    <li><a href="admin_manage_room_insert.jsp">增加车辆信息</a></li>
+	                	<li><a href="queryHouse.do">查询车辆信息</a></li>
 	                </ul>
                 </li>
                 <li class="current"><a href="#"><img src="img/icons/menu/brush.png" alt="" />用户账户管理</a>
@@ -109,16 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	                    <li><a href="selectUser.do">查删改用户管理</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />数据字典管理</a>
-                    <ul>
-                       	<li><a href="admin_dict_insert.jsp">添加数据字典管理</a></li>
-	                    <li><a href="dict.do">查删改数据字典管理</a></li>
-                    </ul>
-                </li>
-                <li><a href="getFunctionByDid.do"><img src="img/icons/menu/brush.png" alt="" />权限管理</a> </li>
-                <li><a href="#"><img src="img/icons/menu/brush.png" alt="" />财务报表管理</a>
-                </li>
-                <li><a href="admin_data_init_manage.jsp"><img src="img/icons/menu/brush.png" alt="" />数据初始化管理</a></li>
+                
             </ul>
         </div>
         <div id="content" class="white">
