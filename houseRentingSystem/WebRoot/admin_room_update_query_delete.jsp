@@ -116,6 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<table>
 		            <thead>
 		                <tr>
+		                    <th>数据ID</th>
 		                    <th>车辆标题</th>
 		                   <!--  <th>车辆类型</th> -->
 		                    <th>车辆配置</th>
@@ -129,6 +130,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		            <tbody>
 		            	<c:forEach items="${houseList }" var="house">
 		                <tr>
+		                    <td>${house.id}</td>
 		                    <td>${house.house_title}</td>
 		                   <%--  <td>${house.house_type}</td> --%>
 		                    <td>${house.decoration}</td>

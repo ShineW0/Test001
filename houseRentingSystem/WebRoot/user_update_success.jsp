@@ -81,17 +81,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <div class="row">
 	        <div class="col-xs-3" id="myScrollspy">
 	            <ul class="nav nav-tabs nav-stacked" id="myNav">
-	                <li><a href="user_person_room.jsp#section-2">修改个人信息</a></li>
+	                <li><a href="user_person_room.jsp#section-2">增添成功</a></li>
 	            </ul>
 	        </div>
 	        
 	        <div class="col-xs-9">
 	        	
-	            <h2 id="section-1">修改成功</h2>
-	            <form action="getHouseByUIdSkip.do" method="post">
+	            <h2 id="section-1">增添汽车信息成功</h2>
+	            <%-- <form action="insertHouse.do" method="post">
 	            <input type="text" name="u_id" value="${user.id}">
-				<input type="submit" value="点击跳转回个人中心">
-				</form>
+				<input type="submit" value="点击跳回继续插入">
+				</form> --%>
+				<a href="${pageContext.request.contextPath }/admin_manage_room_insert.jsp">继续添加</a>
 	            <!-- 修改用户信息结束 -->
 	        </div>
 	    </div>

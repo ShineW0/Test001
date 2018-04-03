@@ -114,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="bloc">
     <div class="title">添加信息</div>
     <div class="content">
-    <!--上传图片开始-->
+     <!--上传图片开始-->
     <div style="width:100%;height:200px;">
     <div style="width:40%; height:170px;float:left;">
     <form action="uploadHouseImg.do" method="post" enctype="multipart/form-data">
@@ -158,26 +158,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</c:if>
 			</div>
         </div>
-        </div>
+        </div> 
         
         <!--上传图片结束-->
         <!--  <form action="insertHouse.do" method="post"> -->
-        <form action="insertHouse.do" method="post">
-    	<!--出租方式开始-->
+<!--           <form action="insertHouse.do" method="post" enctype="multipart/form-data"> -->
+    	 <!--方式开始-->
     	<input type="text" name="u_id" value="${us.id}" style="display: none" >
     	<input type="text" name="image1" value="upload/${file01}" style="display:none;"/>
     	<input type="text" name="image2" value="upload/${file02}" style="display:none;" />
     	<input type="text" name="image3" value="upload/${file03}" style="display:none;"/>
     	<div class="input_css">
             <label class="label label_css">购买方式</label>
-			<label>
-				<input type="radio" name="rental_mode" id="optionsRadios1" value="整租" checked> 全款
-			</label>
-			<label>
-				<input type="radio" name="rental_mode" id="optionsRadios2" value="合租">贷款
-			</label>
+			    <label>
+				<input type="radio" name="rental_mode" id="optionsRadios1" value="全款" checked>全款
+			    </label>
+			  <label>
+				<input type="radio" name="rental_mode" id="optionsRadios2" value="贷款">贷款
+			</label> 
         </div>
-    	<!--购买方式结束-->
+    	<!--购买方式结束--(全款/贷款)>
     	<!--城市名称开始-->
     	<div class="input">
     		<label class="label label_css">城市名称</label>
@@ -189,22 +189,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <label for="BigCate">详细地址</label>
             <span>
             	<select name="address" id="input2">
-	                <option value="尖草坪区">北京</option> 
-					<option value="迎泽区">上海</option>
-					<option value="万柏林区">深圳</option>
+	                <option value="北京三里屯">北京三里屯</option> 
+					<option value="上海虹桥">上海虹桥</option>
+					<option value="深圳福田区">深圳福田区</option>
             	</select>
             </span>
         </div>
-    	<!--详细地址结束-->
-    	<!--车辆类型开始-->
-       <!--  <div class="input input_css">
-            <label for="input1">车辆类型</label>
-	    	<input class="unit_room_in" type="text" id="input1" name="house_room" /><p>座位</p>
-	    	<input class="unit_room_in" type="text" id="input1" name="living_room" /><p>人数</p>
-	    	<input class="unit_room_in" type="text" id="input1" name="house_toilet" /><p>驾驶位</p>
-        </div> -->
-        <!--车辆类型结束-->
-        <!--车辆体积开始-->
+    	
         <div class="input input_css">
             <label for="input1">车辆大小</label>
 	    	<input class="unit_room_in" type="text" id="input3" name="house_area"/><p>立方米</p>
@@ -224,7 +215,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             	</select>
             </span>
             <span>
-            	<select name="decoration">
+            	<select name="decoration" id="input5">
             		<option>车辆配置</option>
 					<option>豪华版</option>
 					<option>高配版</option>
@@ -236,7 +227,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <div class="input">
     		<label class="label label_css">车源标题</label>
-    		<input type="text" id="input1" name="house_title"/>
+    		<input type="text" id="input6" name="house_title"/>
     	</div>
         <!--车源标题结束-->
         <!--车源描述开始-->
@@ -250,34 +241,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         
         <!--提交按钮开始-->
         <div class="submit input_css">
-            <input class="subm_in" type="submit" value="提交"  onclick="send()" onsubmit="return false;" />
+            <input class="sub_in" type="submit" value="提交"  onclick="send()" />
         </div>
         <!--提交按钮结束-->
-        </form>
+      <!-- </form> -->
+        <script type="text/javascript">
+        function send(){
+            var rental_mode = document.getElementById("optionsRadios1").value;
+            var rental_mode = document.getElementById("optionsRadios2").value;
+            var village_name = document.getElementById("input1").value;
+            var address = document.getElementById("input2").value;
+            var house_intro = document.getElementById("input3").value;
+            var house_direction = document.getElementById("input4").value;
+            var decoration = document.getElementById("input5").value;
+            var house_title = document.getElementById("input6").value;
+           $.ajax({
+        	  
+        url: "insertHouse.do",
+        type: "post",
+        datatype: "json",
+        data: {
+            'village_name': village_name,
+            'rental_mode': rental_mode,
+            'address': address,
+            'house_intro': house_intro,
+            'house_direction': house_direction,
+            'decoration': decoration,
+            'house_title': house_title,
+            
+        },
+        success: function (data, state) {
+            alert("successful added");
+           
+        },
+         error: function () {
+            alert("false");
+        } 
+    })
+		}
+   
+</script>
 	</div>
-<!-- 	<script type="text/javascript">
-	function send() 
-	{
-		var village_name = document.getElementById("input1").value;
-        
-		 url: "insertHouse.do",
-         type: "POST",
-         data:{
-        	 village_name:'village_name',
-      
-          },
-         cache:false,
-         dataType: "json",
-         success: function(data){
-             alert ("success");
-          },
-          error:function(err){
-          }
-          
-	
-	}
-
-	</script> -->
-
+ 	
   </body>
 </html>

@@ -25,6 +25,7 @@ public class HouseDaoImpl implements HouseDao{
 		System.out.println("yes housemapper");
 		houseMapper.insertHouse(house);
 		
+		
 	}
 	//查询数据：通过id查询
 	public House getHouseById(int id) {

@@ -28,6 +28,7 @@ import com.hyn.service.HouseService;
  *
  */
 @Controller
+
 public class HouseInsertController {
 	@Resource(name=HouseService.SERVER_NAME)
 	private HouseService houseService;
@@ -96,10 +97,10 @@ public class HouseInsertController {
 	@RequestMapping(value="/insertHouse.do")
 	public String insertHouse(@ModelAttribute House house){
 		System.out.println("yes controller");
-		System.out.println(house.getVillage_name());
+		System.out.println(house);
 		houseService.insertHouse(house);
 		
-		
+		//return "user_update_success.jsp";
 		return "admin_manage_room_insert.jsp";
 	}
 	

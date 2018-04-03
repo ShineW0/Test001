@@ -33,14 +33,14 @@ public class HouseUpdateBackController {
 	private UserService userService;
 	@RequestMapping(value="getHouseBackByHouseId.do")
 	public String updateHouseBackByHouseId(@RequestParam int house_id,
-										   HttpServletRequest request){
-		House house = houseService.getHouseById(house_id);
-		//查看发布信息的用户
-		User us = userService.getUserById(house.getU_id());
-		request.setAttribute("house", house);
-		request.setAttribute("us", us);
-		return "admin_room_update.jsp";
-	}
+			   HttpServletRequest request){
+House house = houseService.getHouseById(house_id);
+//查看发布信息的用户
+User us = userService.getUserById(house.getU_id());
+request.setAttribute("house", house);
+request.setAttribute("us", us);
+return "admin_room_update.jsp";
+}
 	@RequestMapping(value="updateHouseImgBack.do")
 	protected void service(
 						   HttpServletRequest request, 
@@ -111,9 +111,14 @@ public class HouseUpdateBackController {
 		request.getRequestDispatcher("admin_room_update.jsp").forward(request, response);
 	}
 	//上传结束
-	//插入房间信息
+	//插入信息
+	//按照id修改信息
 	@RequestMapping(value="/updateHouseBack.do")
 	public String insertHouse(@ModelAttribute House house){
+		/*System.out.println(house.toString());
+		System.out.println(house.getId());
+		System.out.println(house.getAddress());
+		System.out.println(house.getHouse_title());*/
 		houseService.updateHouseById(house);
 		return "queryHouse.do";
 	}

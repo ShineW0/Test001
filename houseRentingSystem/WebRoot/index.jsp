@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="p_nav">
 					<p>客服电话：000-000-000</p>
 				</div>
-				<a href="admin_room_update_query_delete.jsp">车库</a>
+				<a href="carhouse.jsp">车库</a>
 				<a href="index.jsp">首页</a>
 				<div class="p_log">
 					<p>二手车直卖网</p>

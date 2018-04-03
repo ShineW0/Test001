@@ -181,6 +181,15 @@ public class House {
 	public void setHouse_area(int house_area) {
 		this.house_area = house_area;
 	}
+	@Override
+	public String toString() {
+		return "House [id=" + id + ", rental_mode=" + rental_mode + ", village_name=" + village_name + ", address="
+				+ address + ", house_room=" + house_room + ", living_room=" + living_room + ", house_toilet="
+				+ house_toilet + ", house_direction=" + house_direction + ", decoration=" + decoration + ", house_type="
+				+ house_type + ", rental=" + rental + ", house_title=" + house_title + ", house_intro=" + house_intro
+				+ ", image1=" + image1 + ", image2=" + image2 + ", image3=" + image3 + ", u_id=" + u_id
+				+ ", house_area=" + house_area + "]";
+	}
 	
 	
 }

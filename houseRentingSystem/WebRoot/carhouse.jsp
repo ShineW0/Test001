@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.session.RowBounds"%>
 <%@page import="com.hyn.domain.Dict"%>
 <%@page import="com.hyn.util.ConfigUtil"%>
 <%@page import="com.hyn.service.DictService"%>
@@ -7,34 +8,24 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%
-	DictService dictService = (DictService)ConfigUtil.getBean(DictService.SERVER_NAME);
-	//查询性别
-	List<Dict> sexList = dictService.getDictByTypeList("sex");
-	//查询管理员
-	List<Dict> manageList = dictService.getDictByTypeList("manage");
-	request.setAttribute("sexList", sexList);
-	request.setAttribute("manageList", manageList);
- %>
-
 <!DOCTYPE HTML>
 <html>
   <head>
     <base href="<%=basePath%>">
-        <!-- //删除用户 -->
-    <title>添加车辆信息页面</title>
+    <!--显示车辆信息  -->
+    <title>数据字典页面</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<script type="text/javascript" src="js/libs/jquery/1.6/jquery.min.js"></script>
+	<meta http-equiv="description" content="This is my page">	 
+    <script type="text/javascript" src="js/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="js/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="css/min.css" />
     <link rel="stylesheet" href="css/adminCss/room_forms.css" />
     <script type="text/javascript" src="js/min.js"></script>
-    <script type="text/javascript" src="content/settings/main.js"></script>
+	<script type="text/javascript" src="content/settings/main.js"></script>
 	<link rel="stylesheet" href="content/settings/style.css" />
   </head>
   
@@ -89,80 +80,55 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <!--            
                 SIDEBAR
                          --> 
-        <div id="sidebar">
-            <ul>
-                <li>
-                    <a href="admin_manage_room_insert.jsp">
-                        <img src="img/icons/menu/inbox.png" alt="" />
-                        		管理界面
-                    </a>
-                </li>
-                <li><a href="#"><img src="img/icons/menu/layout.png" alt="" />车源管理</a>
-                    <ul>
-	                    <li><a href="admin_manage_room_insert.jsp">增加车辆信息</a></li>
-	                	<li><a href="queryHouse.do">查询车辆信息</a></li>
-	                </ul>
-                </li>
-                <li class="current"><a href="#"><img src="img/icons/menu/brush.png" alt="" />用户账户管理</a>
-                    <ul>
-                       	<li><a href="admin_user_insert.jsp">添加用户管理</a></li>
-	                    <li class="current"><a href="selectUser.do">查删改用户管理</a></li>
-                    </ul>
-                </li>
-                
-            </ul>
-        </div>
+
+        
+		<!-- 页面内容开始 -->
         <div id="content" class="white">
-            <h1><img src="img/icons/posts.png" alt="" />用户账户管理 </h1>
+            <h1><img src="img/icons/posts.png" alt="" />率先选择车辆 </h1>
+    		<!--查询数据字典数据开始-->
+			<div class="bloc">
+			    <div class="title">
+			    <a href="queryHouseone.do">刷新最近车辆信息</a>
+			    </div>
+			    <div class="content">
+				<table>
+		            <thead>
+		                <tr>
+		                    <th>数据ID</th>
+		                    <th>车辆标题</th>
+		                   <!--  <th>车辆类型</th> -->
+		                    <th>车辆配置</th>
+		                    <th>车辆颜色</th>
+		                    <th>地址</th>
+		                    <th>城市</th>
+		                    <th>操作：修改</th>
+		                    <th>操作：删除</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+		            	<c:forEach items="${houseList }" var="house">
+		                <tr>
+		                    <td>${house.id}</td>
+		                    <td>${house.house_title}</td>
+		                   <%--  <td>${house.house_type}</td> --%>
+		                    <td>${house.decoration}</td>
+		                    <td>${house.house_direction}</td>
+		                    <td>${house.address}</td>
+		                    <td>${house.village_name}</td>
+		                    
+		                </tr>
+		                </c:forEach>
+		                </tbody>
+		        </table>
+			     <div class="pagination">
+		            <c:if test="${pageIndex_house>1}">
+		            	<a href="getHousePageBackone.do?pageIndex_house=${pageIndex_house-1}&pageNum_house=7">«</a>
+		            </c:if>
+		            <a href="getHousePageBackone.do?pageIndex_house=${pageIndex_house+1 }&pageNum_house=7">»</a>
+		        </div> 
+			    </div>
+			</div>
 		<!--查询数据字典数据开始-->
-		<div class="bloc">
-		    <div class="title">
-		        查询用户信息
-		    </div>
-		    <div class="content">
-			<table>
-	            <thead>
-	                <tr>
-	                    <th>用户名</th>
-	                    <th>密码</th>
-	                    <th>年龄</th>
-	                    <th>用户类型</th>
-	                    <th>性别</th>
-	                    <th>常用邮箱</th>
-	                    <th>联系电话</th>
-	                    <th>操作：修改</th>
-	                    <th>操作：删除</th>
-	                </tr>
-	            </thead>
-	            <tbody>
-	            <c:forEach items="${userList }" var="user">
-	                <tr>
-	                    <td>${user.userName}</td>
-	                    <td>${user.passWord}</td>
-	                    <td>${user.age}</td>
-	                    <td>${user.type}</td>
-	                    <td>${user.sex}</td>
-	                    <td>${user.email}</td>
-	                    <td>${user.phone}</td>
-	                    <td>
-	                    
-	                    	<a href="getUserById.do?user_id=${user.id}" title="Edit this content"><img src="img/icons/actions/edit.png" alt="" /></a>
-	                    
-	                    </td>
-	                    <td><a href="deleteUserById.do?user_id=${user.id}" title="Delete this content"><img src="img/icons/actions/delete.png" alt="" /></a></td>
-	                </tr>
-	            </c:forEach>
-	            </tbody>
-	        </table>
-		    <div class="pagination">
-		    <c:if test="${pageIndex_user>1}">
-	            <a href="getUserPage.do?pageIndex_user=${pageIndex_user-1 }&pageNum_user=7">«</a>
-	        </c:if>
-	            <a href="getUserPage.do?pageIndex_user=${pageIndex_user+1 }&pageNum_user=7">»</a>
-	        </div>
-		    </div>
 		</div>
-		<!--查询数据字典数据开始-->
-	</div>
   </body>
 </html>

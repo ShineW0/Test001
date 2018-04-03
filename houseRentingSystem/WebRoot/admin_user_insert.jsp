@@ -21,7 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
+    <!--添加权限  -->
    	<title>添加用户信息页面</title>
     
 	<meta http-equiv="pragma" content="no-cache">

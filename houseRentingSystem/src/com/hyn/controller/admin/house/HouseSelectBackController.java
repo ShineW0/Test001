@@ -29,7 +29,7 @@ public class HouseSelectBackController {
 		return "admin_room_update_query_delete.jsp";
 	}
 	
-	//分页查询的controller
+	//admin分页查询的controller
 	@RequestMapping(value="getHousePageBack.do")
 	public String getHousePage(@RequestParam int pageIndex_house,
 							   @RequestParam int pageNum_house,
@@ -40,5 +40,29 @@ public class HouseSelectBackController {
 		request.setAttribute("pageNum_house", pageNum_house);
 		request.setAttribute("houseList", houseList);
 		return "admin_room_update_query_delete.jsp";
+	}
+	//用户分页查询的controller
+		@RequestMapping(value="getHousePageBackone.do")
+		public String getHousePageone(@RequestParam int pageIndex_house,
+								   @RequestParam int pageNum_house,
+								   HttpServletRequest request){
+			RowBounds rowBounds = new RowBounds((pageIndex_house-1)*pageNum_house, pageNum_house);
+			List<House> houseList = houseService.getHousePage(rowBounds);
+			request.setAttribute("pageIndex_house", pageIndex_house);
+			request.setAttribute("pageNum_house", pageNum_house);
+			request.setAttribute("houseList", houseList);
+			return "carhouse.jsp";
+		}
+	//用户查询车辆信息
+	@RequestMapping(value="queryHouseone.do")
+	public String getHousePageone(HttpServletRequest request){
+		int pageIndex_house = 1;
+		int pageNum_house = 7;
+		RowBounds rowBounds = new RowBounds((pageIndex_house-1)*pageNum_house, pageNum_house);
+		List<House> houseList = houseService.getHousePage(rowBounds);
+		request.setAttribute("houseList", houseList);
+		request.setAttribute("pageIndex_house", pageIndex_house);
+		request.setAttribute("pageNum_house", pageNum_house);
+		return "carhouse.jsp";
 	}
 }
